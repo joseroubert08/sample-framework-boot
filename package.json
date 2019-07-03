@@ -22,7 +22,9 @@
     "make-ember2": "mkdirp dist/ember2",
     "build-ember2": "npm run make-ember2 && cd src/third_party/ember2 && ember build --env production && cd .. && cd .. && cd .. && cp -R src/third_party/ember2/dist/ dist/ember2",
     "make-angular": "mkdirp dist/angular",
-    "build-angular": "npm run make-angular && ngc -p src/angular/tsconfig.json && node src/angular/rollup.config.js && cp src/angular/ssr.html dist/angular && cp src/angular/no-ssr.html dist/angular"
+    "build-angular": "npm run make-angular && ngc -p src/angular/tsconfig.json && node src/angular/rollup.config.js && cp src/angular/ssr.html dist/angular && cp src/angular/no-ssr.html dist/angular",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
   },
   "author": "Paul Lewis",
   "license": "Apache-2.0",
@@ -51,6 +53,8 @@
     "rxjs": "5.0.0-rc.4",
     "typescript": "2.0.10",
     "webpack": "^1.14.0",
-    "zone.js": "0.7.2"
-  }
+    "zone.js": "0.7.2",
+    "snyk": "^1.189.0"
+  },
+  "snyk": true
 }
