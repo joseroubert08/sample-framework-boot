@@ -42,7 +42,7 @@
     "preact": "^7.1.0",
     "react": "^15.4.1",
     "react-dom": "^15.4.1",
-    "rollup": "^0.36.4",
+    "rollup": "^3.29.5",
     "rollup-plugin-babel": "2.6.1",
     "rollup-plugin-commonjs": "5.0.5",
     "rollup-plugin-node-resolve": "2.0.0",
